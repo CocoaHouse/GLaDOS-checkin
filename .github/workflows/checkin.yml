@@ -1,0 +1,27 @@
+name: Glados Daily Checkin
+
+on:
+  schedule:
+    - cron: '30 22 * * *'  # 每天 UTC 22:30（北京时间 6:30）
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run checkin script
+        run: python checkin.py
+        env:
+          GLADOS_AUTH: ${{ secrets.GLADOS_AUTH }}
+          GLADOS_COOKIE: ${{ secrets.GLADOS_COOKIE }}
