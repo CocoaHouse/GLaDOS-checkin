@@ -2,7 +2,7 @@ import os
 import requests
 
 def checkin(user_label, auth, cookie):
-    url = "https://glados.network/api/user/checkin"
+    url = "https://glados.rocks/api/user/checkin"
     headers = {
         "Accept": "application/json, text/plain, */*",
         "Content-Type": "application/json;charset=UTF-8",
@@ -24,6 +24,6 @@ def checkin(user_label, auth, cookie):
     print("")
 
 
-#checkin("User1 (Me)", os.environ.get("GLADOS_AUTH"), os.environ.get("GLADOS_COOKIE"))
+checkin("User1 (Me)", os.environ.get("GLADOS_AUTH"), os.environ.get("GLADOS_COOKIE"))
 
 checkin("User2 (Friend)", os.environ.get("GLADOS_AUTH_USER2"), os.environ.get("GLADOS_COOKIE_USER2"))
