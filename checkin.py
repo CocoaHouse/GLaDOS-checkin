@@ -24,6 +24,6 @@ def checkin(user_label, auth, cookie):
     print("")
 
 
-checkin("User1 (Me)", os.environ.get("GLADOS_AUTH"), os.environ.get("GLADOS_COOKIE"))
+#checkin("User1 (Me)", os.environ.get("GLADOS_AUTH"), os.environ.get("GLADOS_COOKIE"))
 
 checkin("User2 (Friend)", os.environ.get("GLADOS_AUTH_USER2"), os.environ.get("GLADOS_COOKIE_USER2"))
