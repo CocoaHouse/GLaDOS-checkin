@@ -22,7 +22,7 @@ def checkin(user_label, auth, cookie):
     if cookie:
         headers["Cookie"] = cookie
 
-    data = {"token": "glados.one"}
+    data = {"token": "glados.cloud"}
 
     s = requests.Session()
     resp = s.post(url, headers=headers, json=data, timeout=30)
