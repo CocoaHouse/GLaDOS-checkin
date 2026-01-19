@@ -1,3 +1,4 @@
+# Fixed the URL issue caused by glados update (please checkin via https://glados.cloud)
 import os
 import requests
 
@@ -43,3 +44,4 @@ if __name__ == "__main__":
         os.environ.get("GLADOS_AUTH"),
         os.environ.get("GLADOS_COOKIE"),
     )
+
