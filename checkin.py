@@ -2,7 +2,7 @@ import os
 import requests
 
 def checkin(user_label, auth, cookie):
-    url = "https://glados.cloud/api/user/checkin"
+    url = "https://glados.cloud/console/checkin"
     headers = {
         "Accept": "application/json, text/plain, */*",
         "Content-Type": "application/json;charset=UTF-8",
